@@ -104,7 +104,7 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 	
 	
 	public void nuevo_game() {
-	
+		reiniciar();
 		tabla.desordenar(level);
 		panelTabla.actualizarTabla();
 	}
@@ -135,7 +135,7 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 	public void endgame() {
 		if (tabla.tableroIluminado() && tabla.darJugadas()!=0 ) {
 			top10.agregarRegistro(PanelInfo.getJugador(), tabla.darJugadas());
-			JOptionPane.showMessageDialog(this, "Enhorabuena" + PanelInfo.getJugador() + " has terminado el juego. Tuviste una puntuación de: " + tabla.calcularPuntaje() + "puntos"   );
+			JOptionPane.showMessageDialog(this, "Enhorabuena" + PanelInfo.getJugador() + " has terminado el juego. Tuviste una puntuaciÃ³n de: " + tabla.calcularPuntaje() + "puntos"   );
 			nuevo_game();
 		}
 	}
